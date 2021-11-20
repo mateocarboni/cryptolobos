@@ -1,0 +1,97 @@
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pragati Narrow', sans-serif;
+    .contenedor3{
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+        .contenedor3__especif{
+            width: 60%;
+            height: fit-content;
+            @include cajas;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            opacity: 90%;
+            .contenedor3__listas{
+                display: flex;
+                flex-direction: row;
+            }
+            .contenedor3__h3{
+                text-align: center;
+                margin: 20px;
+                display: flex;
+                height: 20%;
+                overflow-wrap: auto;
+            }
+        }
+        .contenedor3__form{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            font-family: '';
+            @include cajas;
+            color: #292929;
+            opacity: 90%;
+            .contenedor3__fieldset{
+                width: 60%;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                row-gap: 15px;
+                .contenedor3__legend{
+                    font-size: 40px;
+                    text-align: center;
+                    margin: 1px;
+                    font-family: 'Teko';
+                }
+                .contenedor3__div{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5px;
+                }
+                .contenedor3__div--check{
+                    display: flex;
+                    flex-direction: row;
+                    input{
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+@media screen and(max-width: 720px) {
+    .contenedor3{
+        flex-direction: column;
+        .contenedor3__especif{
+            width: 90%;
+            margin: auto;
+            .contenedor3__listas{
+                flex-direction: column;
+            }
+            .contenedor3__h3{
+                font-size: 20px;
+            }
+        }
+        .contenedor3__form{
+            width: 90%;
+            margin-top: 20px;
+        }
+    }   
+}
+@media screen and(max-width: 420px){
+    .contenedor3{
+        .contenedor3__especif{
+            .contenedor3__h3{
+                font-size: 20px;
+            }
+            .contenedor3__listas{
+                font-size: 15px;
+            }
+        }
+    }
+}
+}  

@@ -1,0 +1,113 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .grid{
+        width: 90%;
+        height: 80vh;
+        @include cajas;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1fr 1.2fr;
+        gap: 3px;
+        margin-top: 30px;
+        height: fit-content;
+        .gridBox{
+            background-color: white;
+        }
+        .Titulo{
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            text-align: center;
+            font-size: 35px;
+        }
+        .Axie{
+            text-align: center;
+            margin-left: 20px;
+            img{
+                width: 300px;
+            }
+        }
+        .Mines{
+            margin-right: 20px;
+            text-align: center;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+            img{
+                width: 300px;
+                margin-top: 20%;
+            }
+        }
+    }   
+    .contenedor5{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin-top: 20px;
+        .caja1{
+            width: 50%;
+            @include cajas;
+            h3{
+                font-size: 20px;
+                margin-left: 40px;
+                margin-right: 40px;
+                text-align: justify;
+            }
+        }
+        .caja2{
+            width: 35%;
+            @include cajas;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-left: 100px;
+            h3{
+                font-size: 35px;
+            }
+        }
+    }
+}
+@media screen and(max-width: 720px) {
+    .grid{
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 0fr 0.2fr 0fr 1fr 1.2fr !important;
+        .gridBox{
+            margin: 10px !important;
+        }
+    }
+    .contenedor5{
+        flex-direction: column !important;
+        width: 90% !important;
+        .caja1{
+            width: 100% !important;
+        }
+        .caja2{
+            margin: auto !important;
+            margin-top: 10px !important;
+            width: 100% !important;
+        }
+    }
+}
+@media screen and(max-width: 420px) {
+    .grid{
+        width: 95% !important;
+        .Titulo{
+            font-size: 25px !important;
+        }
+        .Axie{
+            font-size: 15px !important;
+        }
+        .Mines{
+            font-size: 15px !important;
+        }
+    }
+    .contenedor5{
+        h3{
+            font-size: 15px !important;
+        }
+        h5{
+            font-size: 12px !important;
+        }
+    }
+    
+}

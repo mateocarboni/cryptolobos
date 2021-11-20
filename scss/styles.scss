@@ -1,0 +1,282 @@
+@import "../scss/_becas.scss";
+@import "../scss/info";
+@import "../scss/mixin";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(217,205,189);
+    background: linear-gradient(180deg, rgba(217,205,189,1) 43%, rgba(217,205,189,0.4629202022605917) 78%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    header{
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        nav{
+            display: flex;
+            background-color: #292929;
+            border-bottom: 5px solid #e85b14;
+            .title{
+                font-family: 'Teko';
+                color: white;
+                font-size: 35px;
+                margin: auto;
+                margin-left: 10px;
+                opacity: 90%;
+                transition: all 0.5s ease;
+                &:hover{
+                    transform: scale(1.07,1.07);
+                }
+            }
+            div{
+                display: flex;
+                justify-content: right;
+            }
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        .contenedor{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 90%;
+            margin: auto;    
+            .contenedor__caja1{
+                margin-top: 60px;
+                margin-right: 110px;
+                height: 300px;
+                width: 800px;
+                opacity: 70%;
+                transition: all 1s ease;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                @include cajas;
+                &:hover{
+                    transform: scale(1.05,1.05);
+                    background-color: #292929;
+                    color: white;
+                    .contenedor__h2{
+                        opacity: 0%;
+                    }
+                    .contenedor__p{
+                        opacity: 90%;
+                    }
+                }
+                .contenedor__p{
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 25px;
+                    line-height : 28px;
+                    font-family: 'Pragati Narrow', sans-serif;
+                    color: white;
+                    opacity: 0%;
+                    transition: all 1s ease;
+                    text-align: justify;
+                }
+                .contenedor__h2{
+                    font-family: 'Pragati Narrow', sans-serif;
+                    font-weight: bold;
+                    font-size: 80px;
+                    color: #292929;
+                    transition: all 1s ease;
+                    position: absolute;
+                    text-align: center;
+                    }                                       
+                
+            }
+            
+            .contenedor__caja2{
+                margin-top: 60px;
+                height: 400px;
+                width: 400px;
+                opacity: 70%;
+                transition: all 1s ease;
+                text-align: center;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                @include cajas;
+                &:hover{
+                    transform: scale(1.05,1.05);
+                    background-color: #292929;
+                    .contenedor__h2{
+                        opacity: 0%;
+                    }
+                    .contenedor__p{
+                        opacity: 90%;
+                    }
+                }
+                .contenedor__p{
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 23px;
+                    font-family: 'Pragati Narrow', sans-serif;
+                    color: white;
+                    opacity: 0%;
+                    transition: all 1s ease;
+                    text-align: justify;
+                }
+                .contenedor__h2{
+                    font-family: 'Pragati Narrow', sans-serif;
+                    font-weight: bold;
+                    font-size: 65px;
+                    color: #292929;
+                    transition: all 1s ease;
+                    position: absolute;
+                    text-align: center;
+                    }                                       
+                }
+            }
+        .contenedor2{
+            @include cajas;
+            width: 80%;
+            margin: auto;
+            margin-top: 80px;;
+            opacity: 100%;
+            display: flex;
+            flex-direction: column;
+            .contenedor2__h2{
+                text-align: center;
+                font-size: 60px;
+                font-family: 'Pragati Narrow', sans-serif;
+                font-weight: bold;
+            }
+            .contenedor2__p{
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Pragati Narrow', sans-serif;
+            }
+            .contenedor2__tc2{
+                margin-left: 20px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                .contenedor2__h3{
+                    margin-left: 40px;
+                    width: 50%;
+                    font-family: 'Pragati Narrow', sans-serif;
+                }
+            }
+            .contenedor2__tc3{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                .contenedor2__h3--equipos{
+                    margin-top: 10px;
+                    margin-left: 55%;
+                    width: 50%;
+                    text-align: right;
+                    font-family: 'Pragati Narrow', sans-serif;
+                }
+                .contenedor2__imagenes{
+                    margin-left: 100px;
+                    display: flex;
+                    column-gap: 90px;
+                    align-self: center;
+                    flex-wrap: wrap;
+                    img{
+                        width: 270px;
+                    }
+                }
+                .contenedor2__h3--futuro{
+                    margin-top: 10px;
+                    margin-left: 70px;
+                    width: 50%;
+                    text-align: left;
+                    font-family: 'Pragati Narrow', sans-serif;
+                }
+            }
+        }
+    }
+    footer{
+        margin-top: 100px;
+        background-color: #292929;
+        opacity: 50%;
+        .footer__h6{
+            color: #d9cdbd;
+            font-size: 12px;
+            text-align: center;
+        }
+    }   
+}
+@media screen and(max-width: 720px) {
+    .contenedor{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        .contenedor__caja1{
+            height: 500px !important;
+            width: 400px !important;
+            margin-right: 0px !important;
+            align-self: center;
+        }
+    }
+    .contenedor2{
+        .contenedor2__tc2{
+            .contenedor2__h3{
+                width: 70% !important;
+            }
+        }
+        .contenedor2__tc3{
+            .contenedor2__imagenes{
+                img{
+                    width: 120px !important;
+                }
+            }
+            .contenedor2__h3--futuro{
+                width: 70% !important;
+            }
+        }
+    }  
+}
+@media screen and(max-width: 420px) {
+    .contenedor{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        .contenedor__caja1{
+            height: 600px;
+            width: 400px !important;
+            margin-right: 0px !important;
+            align-self: center;
+            .contenedor__p{
+                font-size: 20px !important;
+            }
+            .contenedor__h2{
+                font-size: 60px !important;
+            }
+        }
+        .contenedor__caja2{
+            .contenedor__p{
+                font-size: 20px !important;
+            }
+        }
+    }
+    .contenedor2{
+        width: 95% !important;
+        .contenedor2__h2{
+            font-size: 40px !important;
+        }
+        .contenedor2__p{
+            font-size: 20px !important;
+        }
+        .tc3{
+            .contenedor2__imagenes{
+                img{
+                    width: 70px !important;
+                }
+            }
+        }
+    }    
+}
